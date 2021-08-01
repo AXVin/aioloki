@@ -22,7 +22,7 @@ from typing import Dict, Optional
 
 import aiohttp
 
-from aioloki import types
+from . import types
 
 __all__ = (
     'AioLokiHandler',
