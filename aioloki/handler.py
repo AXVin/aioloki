@@ -37,7 +37,7 @@ class AioLokiHandler(logging.Handler):
         tags: Optional[Dict[str, str]]=None,
     ) -> None:
         super().__init__()
-        self._queue = asyncio.Queue[logging.LogRecord]()
+        self._queue = asyncio.Queue()
         self.url = url + '/loki/api/v1/push'
         self.session = session
         self.tags = tags
