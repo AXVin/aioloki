@@ -18,7 +18,7 @@ __title__ = 'aioloki'
 __author__ = 'AXVin'
 __license__ = 'AGPL v3'
 __copyright__ = 'Copyright 2021-present AXVin'
-__version__ = '0.0.1a0'
+__version__ = '0.0.1a1'
 
 from typing import NamedTuple, Literal
 
@@ -31,4 +31,4 @@ class VersionInfo(NamedTuple):
     releaseLevel: Literal['alpha', 'beta', 'candidate', 'final']
     serial: int
 
-version_info = VersionInfo(major=0, minor=0, micro=1, releaseLevel='alpha', serial=0)
+version_info = VersionInfo(major=0, minor=0, micro=1, releaseLevel='alpha', serial=1)
