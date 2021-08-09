@@ -15,6 +15,8 @@ You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 
+from __future__ import annotations
+
 import copy
 import logging
 import asyncio
@@ -37,7 +39,7 @@ class AioLokiHandler(logging.Handler):
         tags: Optional[Dict[str, str]]=None,
     ) -> None:
         super().__init__()
-        self._queue = asyncio.Queue()
+        self._queue: asyncio.Queue[logging.LogRecord] = asyncio.Queue()
         self.url = url + '/loki/api/v1/push'
         self.session = session
         self.tags = tags
